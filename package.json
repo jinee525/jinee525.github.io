@@ -1,6 +1,6 @@
 {
-  "homepage": "https://yj.worklog.io",
-  "name": "yj_worklog",
+  "homepage": "http://jinee525.github.io/yj-worklog",
+  "name": "yj-worklog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
