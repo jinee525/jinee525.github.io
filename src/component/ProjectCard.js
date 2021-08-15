@@ -15,7 +15,7 @@ const FlickerItem = styled.div`
 `;
 
 const CustomCard = styled.div`
-  width: 270px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
