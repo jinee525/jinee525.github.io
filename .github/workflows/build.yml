@@ -1,0 +1,13 @@
+name: Buid github page
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run deploy

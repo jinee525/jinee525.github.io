@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import MyWorksTabs from './MyWorksTabs';
 import MyWorksTabContents from './MyWorksTabContents';
-import AcademicAchievement from '../component/AcademicAchievement';
-import Careers from '../component/Careers';
+import AcademicAchievementContainer from './Academic/AcademicAchievementContainer';
+import CareersContainer from './Career/CareersContainer';
 
 const MyWorksContainer = () => {
   const TabEl = useRef();
@@ -16,10 +16,10 @@ const MyWorksContainer = () => {
         <MyWorksTabs currentTabValue={currentTabValue} handleTabValue={setCurrentTabValue} />
       </div>
       <MyWorksTabContents value={currentTabValue} index={0}>
-        <AcademicAchievement></AcademicAchievement>
+        <AcademicAchievementContainer></AcademicAchievementContainer>
       </MyWorksTabContents>
       <MyWorksTabContents value={currentTabValue} index={1}>
-        <Careers></Careers>
+        <CareersContainer></CareersContainer>
       </MyWorksTabContents>
     </div>
   );
