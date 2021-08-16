@@ -42,16 +42,12 @@ const Tab = styled.div`
       font-weight: bold;
     }
   }
-
-  &:nth-child(-n + 3) {
-    margin-right: 10px;
-  }
 `;
 
 const TabWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 49px;
+  height: 60px;
   box-sizing: border-box;
   background-color: #fff;
 `;

@@ -39,10 +39,10 @@ const InfoWrapper = styled.div`
   }
   .info {
     display: flex;
-
+    padding: 4px 6px;
     &:hover {
       cursor: pointer;
-      border-radius: 6px;
+      border-radius: 8px;
       background-color: ${colorDict.lightBackground};
     }
   }

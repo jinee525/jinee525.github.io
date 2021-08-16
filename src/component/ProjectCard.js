@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import PageviewIcon from '@material-ui/icons/Pageview';
+
+import { colorDict } from '../helpers/colors';
 
 const FlickerItem = styled.div`
   width: 270px;
@@ -19,7 +22,7 @@ const CustomCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
+  height: 460px;
   justify-content: space-between;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%);
   border-radius: 4px;
@@ -28,8 +31,14 @@ const CustomCard = styled.div`
 
 const IconWrapper = styled.div`
   display: flex;
-  margin-right: 5px;
   align-self: flex-end;
+  border-radius: 8px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${colorDict.lightBackground};
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -61,7 +70,7 @@ const Img = styled.img`
 const ProjectCard = (props) => {
   const { item: projects } = props;
   const { id, data } = projects;
-  const { thumbnail, title, desc, link } = data;
+  const { thumbnail, title, desc, techInfo, role, link } = data;
 
   // move to each blog
   const handleClick = (link) => {
@@ -69,7 +78,7 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <FlickerItem key={id} onClick={() => handleClick(link)}>
+    <FlickerItem key={id}>
       <CustomCard>
         <ContentWrapper>
           <ImgWrapper>
@@ -77,10 +86,10 @@ const ProjectCard = (props) => {
           </ImgWrapper>
           <span className="title">{title}</span>
           <span className="desc">{desc}</span>
+          <span className="desc">{techInfo}</span>
+          <span className="desc">{role}</span>
         </ContentWrapper>
-        <IconWrapper>
-          <GitHubIcon />
-        </IconWrapper>
+        <IconWrapper onClick={() => handleClick(link)}>{techInfo === 'AdobeXD' ? <PageviewIcon /> : <GitHubIcon />}</IconWrapper>
       </CustomCard>
     </FlickerItem>
   );
