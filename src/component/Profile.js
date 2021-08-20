@@ -2,15 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { Grid } from '@material-ui/core';
 
 import { colorDict } from '../helpers/colors';
 import ProfileImg from '../data/img/dev_yj.png';
+import { skills } from '../data/infos';
+
+const Chip = styled.div`
+  width: auto;
+  height: auto;
+  padding: 6px 12px;
+  margin: 4px 8px;
+  border-radius: 8px;
+  border: solid 1px ${colorDict.darkText};
+`;
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
 `;
+
+const Section = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const ImgWrapper = styled.div`
   position: relative;
   overflow: hidden;
@@ -46,6 +62,17 @@ const InfoWrapper = styled.div`
       background-color: ${colorDict.lightBackground};
     }
   }
+  .title {
+    font-size: larger;
+    font-weight: bold;
+  }
+  .flexContainer {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -60,31 +87,46 @@ const handleClickContactButton = (type) => {
     window.open('https://github.com/jinee525');
   }
 };
+const getSkills = (skills) => {
+  return skills.map((item, index) => {
+    return <Chip key={index}>{item}</Chip>;
+  });
+};
 
 const Profile = () => {
   return (
     <Wrapper>
-      <ImgWrapper>
-        <Img src={ProfileImg} alt="profile-image" />
-      </ImgWrapper>
-      <InfoWrapper>
-        <div className="name">
-          <span>박유진</span>
-          <span>Yujin Park</span>
-        </div>
-        <div className="info" onClick={() => handleClickContactButton('email')}>
-          <IconWrapper>
-            <EmailIcon />
-          </IconWrapper>
-          <span>mobiyujin@gmail.com</span>
-        </div>
-        <div className="info" onClick={() => handleClickContactButton('github')}>
-          <IconWrapper>
-            <GitHubIcon />
-          </IconWrapper>
-          <span>https://github.com/jinee525</span>
-        </div>
-      </InfoWrapper>
+      <Section>
+        <ImgWrapper>
+          <Img src={ProfileImg} alt="profile-image" />
+        </ImgWrapper>
+        <InfoWrapper>
+          <div className="name">
+            <span>박유진</span>
+            <span>Yujin Park</span>
+          </div>
+          <div className="info" onClick={() => handleClickContactButton('email')}>
+            <IconWrapper>
+              <EmailIcon />
+            </IconWrapper>
+            <span>mobiyujin@gmail.com</span>
+          </div>
+          <div className="info" onClick={() => handleClickContactButton('github')}>
+            <IconWrapper>
+              <GitHubIcon />
+            </IconWrapper>
+            <span>https://github.com/jinee525</span>
+          </div>
+        </InfoWrapper>
+      </Section>
+      <Section>
+        <InfoWrapper>
+          <span className="title">Skills</span>
+          <div className="flexContainer">
+            <Grid container>{getSkills(skills)}</Grid>
+          </div>
+        </InfoWrapper>
+      </Section>
     </Wrapper>
   );
 };

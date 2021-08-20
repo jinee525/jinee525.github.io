@@ -66,10 +66,10 @@ const MyWorksTabs = ({ currentTabValue, handleTabValue }) => {
   return (
     <TabWrapper>
       <Tab isSelected={currentTabValue === 0} onClick={() => onChangeTabValue(0)} {...tabProps(0)}>
-        Academic Achievement
+        Education
       </Tab>
       <Tab isSelected={currentTabValue === 1} onClick={() => onChangeTabValue(1)} {...tabProps(1)}>
-        Career
+        Work Experience
       </Tab>
     </TabWrapper>
   );

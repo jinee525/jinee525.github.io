@@ -4,7 +4,6 @@ import ProjectParadise from './img/파라다이스.png';
 import ProjectTagDocs from './img/태그독스.png';
 import ProjectPoint from './img/포인트.png';
 import ProjectTransport from './img/대중교통.png';
-import HJLogo from './img/hj_logo.png';
 
 const gameProjects = [
   {
@@ -12,7 +11,7 @@ const gameProjects = [
     data: {
       thumbnail: ProjectSushiStack,
       title: '스시스택',
-      desc: '떨어지는 접시와 초밥을 손님에따라 골라서 받아내는 안드로이드 모바일 캐쥬얼 게임',
+      desc: '떨어지는 접시와 초밥을 손님에따라 골라서 받아내는 모바일 캐쥬얼 게임',
       role: 'PM, 기획, 그래픽',
       techInfo: 'Unity,C#',
       link: 'https://github.com/Jo-Yewon/SushiStack',
@@ -59,8 +58,8 @@ const UXProjects = [
     id: 1,
     data: {
       thumbnail: ProjectPoint,
-      title: '카카오톡 카페 포인트 적립',
-      desc: '카페 포인트 적립 서비스를 기획하고 프로토타입을 제작한 개인 프로젝트',
+      title: '카카오톡 포인트 적립',
+      desc: '카페/식당 포인트 적립 서비스를 기획하고 프로토타입을 제작 (개인 프로젝트)',
       techInfo: 'AdobeXD',
       link: 'https://xd.adobe.com/view/00425b86-7f18-4449-6762-14129515057c-7673/',
     },
@@ -70,7 +69,7 @@ const UXProjects = [
     data: {
       thumbnail: ProjectTransport,
       title: 'T-Bus',
-      desc: '타임매니저 시스템을 중심으로 대중교통 앱을 기획하고 프로토타입을 제작한 팀 프로젝트',
+      desc: '타임매니저 시스템을 중심으로 대중교통 앱을 기획하고 프로토타입을 제작 (팀 프로젝트)',
       techInfo: 'AdobeXD',
       link: 'https://xd.adobe.com/view/031c64a2-38d5-4cca-577c-cc82ca783f00-752d/',
     },
@@ -150,27 +149,4 @@ const clubs = [
   },
 ];
 
-const jobs = [
-  {
-    id: 1,
-    data: {
-      logo: HJLogo,
-      title: '플래너리',
-      date: '2020.07.07 ~ 2021.01.07',
-      tech: ['React', 'JS', 'Python', 'GraphQL', 'AWS (Cloud Services)', 'PostgreSQL', 'Django', 'ReactAdmin', 'CSS', 'Node.js'],
-      desc: '인턴',
-    },
-  },
-  {
-    id: 2,
-    data: {
-      logo: HJLogo,
-      title: '플래너리',
-      date: '2021.01.08 ~ 현재',
-      tech: ['React', 'JS', 'Python', 'GraphQL', 'AWS (Cloud Services)', 'PostgreSQL', 'Django', 'ReactAdmin', 'CSS', 'Node.js'],
-      desc: '정규직',
-    },
-  },
-];
-
-export { gameProjects, AIProjects, UXProjects, clubs, jobs };
+export { gameProjects, AIProjects, UXProjects, clubs };

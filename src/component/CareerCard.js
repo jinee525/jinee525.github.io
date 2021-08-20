@@ -19,7 +19,7 @@ const CustomCard = styled.div`
   flex-direction: column;
   height: auto;
   justify-content: space-between;
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%);
+  box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
   border-radius: 4px;
   padding: 40px 20px 20px;
 `;
@@ -50,14 +50,14 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const TopSection = styled.div`
+const SummarySection = styled.div`
   display: flex;
   .info {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 
-    .title {
+    .company {
       font-size: larger;
       font-weight: bold;
     }
@@ -65,6 +65,11 @@ const TopSection = styled.div`
       color: ${colorDict.lightText};
     }
   }
+`;
+
+const ProjectSection = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ImgWrapper = styled.div`
@@ -78,30 +83,78 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
+const BoxWrapper = styled.div`
+  disply: flex;
+  flex-display: column;
+  border-left: solid 2px ${colorDict.darkText};
+  padding-left: 10px;
+  margin: 10px 0px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    .sub {
+      margin-left: 10px;
+      font-weight: normal;
+      color: ${colorDict.lightText};
+    }
+  }
+
+  .content {
+    margin: 10px 0px;
+  }
+  .chipContainer {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+  }
+`;
+
 const getChips = (items) => {
-  return items.map((item) => {
-    return <Chip>{item}</Chip>;
+  return items.map((item, index) => {
+    return <Chip key={index}>{item}</Chip>;
+  });
+};
+
+const getProjectBox = (projects) => {
+  return projects.map((item, index) => {
+    return (
+      <BoxWrapper key={index}>
+        <div className="title">
+          {item.title}
+          <div className="sub">
+            {item.boundary.map((item, index) => {
+              return <span key={index}>#{item} </span>;
+            })}
+          </div>
+        </div>
+        <p className="content">{item.content}</p>
+        <div className="chipContainer">{getChips(item.tech)}</div>
+      </BoxWrapper>
+    );
   });
 };
 
 const CareerCard = (props) => {
   const { item: careers } = props;
-  const { logo, title, desc, tech, date } = careers.data;
+  const { logo, company, projects, date } = careers;
 
   return (
     <CustomCard key={careers.id}>
       <ContentWrapper>
-        <TopSection>
+        <SummarySection>
           <ImgWrapper>
             <Img src={logo} alt="logo" />
           </ImgWrapper>
           <div className="info">
-            <span className="title">{title}</span>
+            <span className="company">{company}</span>
             <span className="date">{date}</span>
           </div>
-        </TopSection>
-        <span className="desc">{desc}</span>
-        <div className="techList">{getChips(tech)}</div>
+        </SummarySection>
+        <ProjectSection>{getProjectBox(projects)}</ProjectSection>
       </ContentWrapper>
     </CustomCard>
   );

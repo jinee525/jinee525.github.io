@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 
 import MyWorksTabs from './MyWorksTabs';
 import MyWorksTabContents from './MyWorksTabContents';
-import AcademicAchievementContainer from './Academic/AcademicAchievementContainer';
+import Education from './Academic/Education';
 import CareersContainer from './Career/CareersContainer';
 
 const MyWorksContainer = () => {
@@ -15,7 +15,7 @@ const MyWorksContainer = () => {
         <MyWorksTabs currentTabValue={currentTabValue} handleTabValue={setCurrentTabValue} />
       </div>
       <MyWorksTabContents value={currentTabValue} index={0}>
-        <AcademicAchievementContainer></AcademicAchievementContainer>
+        <Education></Education>
       </MyWorksTabContents>
       <MyWorksTabContents value={currentTabValue} index={1}>
         <CareersContainer></CareersContainer>

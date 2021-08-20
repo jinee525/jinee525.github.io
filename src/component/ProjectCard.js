@@ -18,15 +18,20 @@ const FlickerItem = styled.div`
 `;
 
 const CustomCard = styled.div`
-  width: 210px;
+  width: 230px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 460px;
+  height: auto;
   justify-content: space-between;
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%);
+  box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
   border-radius: 4px;
   padding: 40px 20px 20px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 60%);
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -79,7 +84,7 @@ const ProjectCard = (props) => {
 
   return (
     <FlickerItem key={id}>
-      <CustomCard>
+      <CustomCard onClick={() => handleClick(link)}>
         <ContentWrapper>
           <ImgWrapper>
             <Img src={thumbnail} alt="profile-image" />

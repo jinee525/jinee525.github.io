@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import CareerCard from '../../component/CareerCard';
-import { jobs } from '../../data/projects';
+import { jobs } from '../../data/infos';
 
 const Wrapper = styled.div`
   display: flex;

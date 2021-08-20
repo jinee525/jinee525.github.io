@@ -6,6 +6,16 @@ import SchoolIcon from '@material-ui/icons/School';
 import ProjectCard from '../../component/ProjectCard';
 import SimpleCard from '../../component/SimpleCard';
 import { gameProjects, AIProjects, UXProjects, clubs } from '../../data/projects';
+import { colorDict } from '../../helpers/colors';
+
+const Chip = styled.div`
+  width: auto;
+  height: auto;
+  padding: 6px 12px;
+  margin: 4px 8px;
+  border-radius: 8px;
+  background-color: ${colorDict.lightBackground};
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,6 +23,8 @@ const Wrapper = styled.div`
 `;
 const Section = styled.div`
   margin: 20px 0px;
+  flex-direction: column;
+  display: flex;
 
   .title {
     font-size: larger;
@@ -20,6 +32,8 @@ const Section = styled.div`
   }
 
   .desc {
+    margin: 20px 0px 20px 8px;
+
     li {
       display: flex;
       list-style: none;
@@ -28,7 +42,7 @@ const Section = styled.div`
 
   .flexContainer {
     width: 100%;
-    margin: 20px auto;
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,21 +64,27 @@ const getProjectCards = (projects) => {
   });
 };
 
+// const getClubCards = (clubs) => {
+//   return clubs.map((item) => {
+//     return (
+//       <Grid item key={item.id}>
+//         <SimpleCard item={item} />
+//       </Grid>
+//     );
+//   });
+// };
+
 const getClubCards = (clubs) => {
-  return clubs.map((item) => {
-    return (
-      <Grid item key={item.id}>
-        <SimpleCard item={item} />
-      </Grid>
-    );
+  return clubs.map((item, index) => {
+    return <Chip key={index}>{item.data.title}</Chip>;
   });
 };
 
-const AcademicAchievementContainer = () => {
+const Education = () => {
   return (
     <Wrapper>
       <Section>
-        <span className="title"></span>
+        <span className="title">Education</span>
         <span className="desc">
           <li>
             <IconWrapper>
@@ -78,31 +98,31 @@ const AcademicAchievementContainer = () => {
         </span>
       </Section>
       <Section>
-        <span className="title">활동</span>
+        <span className="title">Activities</span>
         <div className="flexContainer">
           <Grid container>{getClubCards(clubs)}</Grid>
         </div>
       </Section>
       <Section>
-        <span className="title">게임 개발 프로젝트</span>
+        <span className="title">Game Projects</span>
         <div className="flexContainer">
-          <Grid container justify="space-around">
+          <Grid container justifyContent="space-around">
             {getProjectCards(gameProjects)}
           </Grid>
         </div>
       </Section>
       <Section>
-        <span className="title">UX/UI 프로젝트</span>
+        <span className="title">UX/UI Projects</span>
         <div className="flexContainer">
-          <Grid container justify="space-around">
+          <Grid container justifyContent="space-around">
             {getProjectCards(UXProjects)}
           </Grid>
         </div>
       </Section>
       <Section>
-        <span className="title">인공지능 프로젝트</span>
+        <span className="title">AI PROJECTS</span>
         <div className="flexContainer">
-          <Grid container justify="space-around">
+          <Grid container justifyContent="space-around">
             {getProjectCards(AIProjects)}
           </Grid>
         </div>
@@ -111,4 +131,4 @@ const AcademicAchievementContainer = () => {
   );
 };
 
-export default AcademicAchievementContainer;
+export default Education;

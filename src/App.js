@@ -16,12 +16,12 @@ const ProfileSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 150px;
+  height: auto;
   margin: 20px auto;
 `;
 const WorkSection = styled(ProfileSection)`
   margin: 20px auto;
-  height: 900px;
+  height: auto;
 `;
 
 function App() {
