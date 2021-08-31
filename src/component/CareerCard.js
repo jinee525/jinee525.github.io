@@ -60,6 +60,14 @@ const SummarySection = styled.div`
     .company {
       font-size: larger;
       font-weight: bold;
+      .link {
+        font-size: smaller;
+        color: ${colorDict.lightText};
+        &:hover {
+          cursor: pointer;
+          color: ${colorDict.darkText};
+        }
+      }
     }
     .date {
       color: ${colorDict.lightText};
@@ -70,6 +78,9 @@ const SummarySection = styled.div`
 const ProjectSection = styled.div`
   display: flex;
   flex-direction: column;
+  .summary {
+    margin: 10px 0px;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -100,7 +111,6 @@ const BoxWrapper = styled.div`
       color: ${colorDict.lightText};
     }
   }
-
   .content {
     margin: 10px 0px;
   }
@@ -110,6 +120,30 @@ const BoxWrapper = styled.div`
     display: flex;
     flex-direction: row;
     font-size: smaller;
+  }
+  .link {
+    font-size: smaller;
+    color: ${colorDict.lightText};
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`;
+
+const ImgContainer = styled.div`
+  background-color: ${colorDict.lightText50};
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .imgWrapper {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
   }
 `;
 
@@ -132,7 +166,22 @@ const getProjectBox = (projects) => {
           </div>
         </div>
         <p className="content">{item.content}</p>
+        {item.url && (
+          <a className="link" href={item.url} target="_blank" rel="noreferrer">
+            {item.url}
+          </a>
+        )}
         <div className="chipContainer">{getChips(item.tech)}</div>
+        {item.preview && (
+          <ImgContainer>
+            <div className="imgWrapper">
+              <Img src={item.preview[0]} alt="preview" />
+            </div>
+            <div className="imgWrapper">
+              <Img src={item.preview[1]} alt="preview" />
+            </div>
+          </ImgContainer>
+        )}
       </BoxWrapper>
     );
   });
@@ -140,7 +189,7 @@ const getProjectBox = (projects) => {
 
 const CareerCard = (props) => {
   const { item: careers } = props;
-  const { logo, company, projects, date } = careers;
+  const { logo, company, projects, date, url, summary } = careers;
 
   return (
     <CustomCard key={careers.id}>
@@ -150,11 +199,19 @@ const CareerCard = (props) => {
             <Img src={logo} alt="logo" />
           </ImgWrapper>
           <div className="info">
-            <span className="company">{company}</span>
+            <span className="company">
+              {company}{' '}
+              <a className="link" href={url} target="_blank" rel="noreferrer">
+                {url}
+              </a>
+            </span>
             <span className="date">{date}</span>
           </div>
         </SummarySection>
-        <ProjectSection>{getProjectBox(projects)}</ProjectSection>
+        <ProjectSection>
+          <div className="summary">{summary}</div>
+          {getProjectBox(projects)}
+        </ProjectSection>
       </ContentWrapper>
     </CustomCard>
   );

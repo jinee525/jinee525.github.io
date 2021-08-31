@@ -11,6 +11,10 @@ const Wrapper = styled.div`
 const Section = styled.div`
   margin: 20px 0px;
   align-self: center;
+  .desc {
+    font-size: smaller;
+    padding-left: 4px;
+  }
 `;
 const CardContainer = styled.div`
   display: flex;
@@ -29,7 +33,10 @@ const getCareerCards = (jobs) => {
 const CareersContainer = () => {
   return (
     <Wrapper>
-      <Section>{getCareerCards(jobs)}</Section>
+      <Section>
+        <div className="desc">*기여도가 높고 서비스에 영향을 많이 끼친 프로젝트 위주로 정리하였습니다.</div>
+        {getCareerCards(jobs)}
+      </Section>
     </Wrapper>
   );
 };

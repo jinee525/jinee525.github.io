@@ -24,9 +24,10 @@ const CustomCard = styled.div`
   align-items: center;
   height: auto;
   justify-content: space-between;
+  padding: 40px 20px 20px;
+
   box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
   border-radius: 4px;
-  padding: 40px 20px 20px;
 
   &:hover {
     cursor: pointer;

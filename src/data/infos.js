@@ -1,4 +1,6 @@
 import HJLogo from './img/hj_logo.png';
+import PreBlog1 from './img/pre_blog_1.png';
+import PreBlog2 from './img/pre_blog_2.png';
 
 const skills = [
   'React',
@@ -22,14 +24,18 @@ const jobs = [
     id: 1,
     logo: HJLogo,
     company: '플래너리',
+    url: 'https://heyjoyce.com',
     date: '2020.07.07 ~ 2021.01.07 (인턴) / 2021.01.08 ~ 현재 (정규)',
+    summary:
+      '스타트업의 5인으로 이루어진 개발팀에서 풀스택 웹개발자로 근무하고 있습니다. 적은 인원으로 이루어진 개발팀이기에 크고 작은 프로젝트들을 주도적으로 진행하고있습니다. AWS를 이용하여 효율적으로 BE개발을 하고 Reat로 FE MVP를 구현하며 빠른 delivery를 하고있습니다.',
     projects: [
       {
         title: '배너 자동화',
         content:
-          'www.heyjoyce.com 웹사이트 메인 페이지의 상단/하단 배너를 관리하는 adminAPI/clientAPI를 구현함. adminAPI: 관리자가 조건(기간, 대상 유저, 우선순위)을 설정하여 배너를 생성할 수 있음. clinetAPI: 웹사이트에서 조건에 맞는 배너를 가져와 화면에 표시함',
+          '웹사이트 메인 페이지의 상단/하단 배너를 관리하는 adminAPI/clientAPI를 구현함. adminAPI: 관리자가 조건(기간, 대상 유저, 우선순위)을 설정하여 배너를 생성할 수 있음. clinetAPI: 웹사이트에서 조건에 맞는 배너를 가져와 화면에 표시함',
         boundary: ['BE'],
         tech: ['Django', 'Python', 'React', 'JavaScript', 'Node.js', 'CSS'],
+        url: '',
       },
       {
         title: '쿠폰 패키지 (신규 서비스)',
@@ -61,10 +67,10 @@ const jobs = [
           '서비스하는 모든 콘텐츠에대한 통합 검색 기능 MVP를 구현함. 다양한 타입의 콘텐츠를 추가할 수 있게 확장성 있는 schema를 정의함. 30분마다 update된 postgreSQL의 data를 이벤트브릿지로 구독하여 AWS Elasticsearch에 싱크함. ES query와 graphQL을 이용하여 검색 시스템을 구현함',
         boundary: ['BE'],
         tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'AWS-Lambda', 'AWS-EventBridge'],
-        url: '',
+        url: 'https://heyjoyce.com',
       },
       {
-        title: 'Feed table 확장 (feat. 블로그&리뷰 시스템)',
+        title: 'table 확장 설계 (feat. 블로그&리뷰 시스템)',
         content:
           '기존 커리어 상담 콘텐츠를 담고 있던 dynamoDB table을 리뉴얼하여 다른 타입의 서비스를 제공할 수 있도록 구현함. 블로그와 리뷰 시스템의 graphQL을 설계하고, AWS-Elasticsearch의 쿼리 기능을 이용하여 적절한 콘텐츠를 제공할 수 있도록 구현함',
         boundary: ['BE'],
@@ -72,12 +78,13 @@ const jobs = [
         url: '',
       },
       {
-        title: '블로그(신규 서비스)',
+        title: '블로그 (신규 서비스)',
         content:
           '브랜드 스토리, 가이드, 인터뷰를 담고 있는 블로그 페이지를 구현함. graphQL 쿼리를 이용하여 리스트와 각 데이터를 불러오고 세부 타입별로 나누어 탭을 구성함',
         boundary: ['FE'],
         tech: ['GraphQL', 'React', 'JavaScript', 'Node.js', 'CSS'],
         url: 'https://heyjoyce.com/blog/list',
+        preview: [PreBlog1, PreBlog2],
       },
     ],
   },
