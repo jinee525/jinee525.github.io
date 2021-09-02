@@ -131,7 +131,6 @@ const BoxWrapper = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  background-color: ${colorDict.lightText50};
   width: 100%;
   margin: 10px 0px;
   display: flex;
@@ -139,8 +138,9 @@ const ImgContainer = styled.div`
   justify-content: space-around;
 
   .imgWrapper {
-    padding: 10px;
-    position: relative;
+    border: solid 1px ${colorDict.lightText50};
+    padding: 5px;
+    margin: 10px;
     overflow: hidden;
     width: 100%;
     display: flex;

@@ -1,6 +1,10 @@
 import HJLogo from './img/hj_logo.png';
 import PreBlog1 from './img/pre_blog_1.png';
 import PreBlog2 from './img/pre_blog_2.png';
+import PreCareer1 from './img/pre_career_1.png';
+import PreCareer2 from './img/pre_career_2.png';
+import PrePackage1 from './img/pre_package_1.png';
+import PrePackage2 from './img/pre_package_2.png';
 
 const skills = [
   'React',
@@ -44,6 +48,7 @@ const jobs = [
         boundary: ['FE', 'BE'],
         tech: ['AWS-Lambda', 'AWS-EventBridge', 'AWS-DynamoDB', 'SAAS', 'React', 'React', 'JavaScript', 'Node.js', 'CSS'],
         url: 'https://heyjoyce.com/package',
+        preview: [PrePackage1, PrePackage2],
       },
       {
         title: '콘텐츠 검색 기능 (신규 서비스)',
@@ -52,6 +57,7 @@ const jobs = [
         boundary: ['FE', 'BE'],
         tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'React', 'JavaScript', 'Node.js', 'CSS'],
         url: 'https://heyjoyce.com/feed/list',
+        preview: [PreCareer1, PreCareer2],
       },
       {
         title: '디지털 콘텐츠 자동 등록 및 안내',
@@ -64,15 +70,15 @@ const jobs = [
       {
         title: '통합 검색 시스템 (신규 서비스)',
         content:
-          '서비스하는 모든 콘텐츠에대한 통합 검색 기능 MVP를 구현함. 다양한 타입의 콘텐츠를 추가할 수 있게 확장성 있는 schema를 정의함. 30분마다 update된 postgreSQL의 data를 이벤트브릿지로 구독하여 AWS Elasticsearch에 싱크함. ES query와 graphQL을 이용하여 검색 시스템을 구현함',
+          '서비스하는 모든 콘텐츠에대한 통합 검색 기능 MVP를 AWS-Elasticsearch를 이용하여 구현함. 다양한 타입의 콘텐츠를 추가할 수 있게 확장성 있는 schema를 정의함. 30분마다 update된 postgreSQL의 data를 (AWS) 이벤트브릿지로 구독하여 AWS Elasticsearch에 싱크함. ES query로 데이터를 만들고, graphQL를 api로 사용하여 검색 시스템을 구현함',
         boundary: ['BE'],
         tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'AWS-Lambda', 'AWS-EventBridge'],
         url: 'https://heyjoyce.com',
       },
       {
-        title: 'table 확장 설계 (feat. 블로그&리뷰 시스템)',
+        title: 'table 확장 설계 (feat. microservice)',
         content:
-          '기존 커리어 상담 콘텐츠를 담고 있던 dynamoDB table을 리뉴얼하여 다른 타입의 서비스를 제공할 수 있도록 구현함. 블로그와 리뷰 시스템의 graphQL을 설계하고, AWS-Elasticsearch의 쿼리 기능을 이용하여 적절한 콘텐츠를 제공할 수 있도록 구현함',
+          'microservice 중 하나인 feed services를 확장 설계하여 여러가지 콘텐츠를 제공할 수 있도록 함. 여러 타입의 콘텐츠에서 사용하는 필드와 개별 필들를 정하고 dynamoDB를 재 설계함. 각 요청에 맞게 graphQL를 수정하고, 각 resolver에 AWS-Elasticsearch의 쿼리 기능을 연결하여 적절한 콘텐츠를 제공할 수 있도록 구현함',
         boundary: ['BE'],
         tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL'],
         url: '',
