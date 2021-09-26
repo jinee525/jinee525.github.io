@@ -29,6 +29,19 @@ const CustomCard = styled.div`
   box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
   border-radius: 4px;
 
+  .gitBox {
+    display: flex;
+    flex-direction: row;
+    .git {
+      width: 186px;
+      padding-right: 4px;
+      word-break: break-all;
+      font-size: smaller;
+      color: ${colorDict.lightText};
+      margin: 6px 0px;
+    }
+  }
+
   &:hover {
     cursor: pointer;
     box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 60%);
@@ -37,9 +50,9 @@ const CustomCard = styled.div`
 
 const IconWrapper = styled.div`
   display: flex;
-  align-self: flex-end;
   border-radius: 8px;
   padding: 10px;
+  align-self: center;
 
   &:hover {
     cursor: pointer;
@@ -95,7 +108,10 @@ const ProjectCard = (props) => {
           <span className="desc">{techInfo}</span>
           <span className="desc">{role}</span>
         </ContentWrapper>
-        <IconWrapper onClick={() => handleClick(link)}>{techInfo === 'AdobeXD' ? <PageviewIcon /> : <GitHubIcon />}</IconWrapper>
+        <div className="gitBox">
+          <span className="git">{link}</span>
+          <IconWrapper onClick={() => handleClick(link)}>{techInfo === 'AdobeXD' ? <PageviewIcon /> : <GitHubIcon />}</IconWrapper>
+        </div>
       </CustomCard>
     </FlickerItem>
   );

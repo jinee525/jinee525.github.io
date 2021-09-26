@@ -19,9 +19,6 @@ const CustomCard = styled.div`
   flex-direction: column;
   height: auto;
   justify-content: space-between;
-  box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
-  border-radius: 4px;
-  padding: 40px 20px 20px;
 `;
 
 const IconWrapper = styled.div`
@@ -52,6 +49,10 @@ const ContentWrapper = styled.div`
 
 const SummarySection = styled.div`
   display: flex;
+  border: solid 1px #274c5e;
+  padding: 20px;
+  border-radius: 4px;
+
   .info {
     display: flex;
     flex-direction: column;
@@ -72,22 +73,22 @@ const SummarySection = styled.div`
     .date {
       color: ${colorDict.lightText};
     }
+    .summary {
+      margin-top: 10px;
+    }
   }
 `;
 
 const ProjectSection = styled.div`
   display: flex;
   flex-direction: column;
-  .summary {
-    margin: 10px 0px;
-  }
+  padding: 20px;
 `;
 
 const ImgWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  width: 75px;
-  height: 75px;
+  width: 200px;
 `;
 
 const Img = styled.img`
@@ -99,7 +100,7 @@ const BoxWrapper = styled.div`
   flex-display: column;
   border-left: solid 2px ${colorDict.darkText};
   padding-left: 10px;
-  margin: 10px 0px;
+  margin: 12px 0px;
 
   .title {
     display: flex;
@@ -113,6 +114,7 @@ const BoxWrapper = styled.div`
   }
   .content {
     margin: 10px 0px;
+    white-space: pre-wrap;
   }
   .chipContainer {
     width: 100%;
@@ -142,7 +144,6 @@ const ImgContainer = styled.div`
     padding: 5px;
     margin: 10px;
     overflow: hidden;
-    width: 100%;
     display: flex;
   }
 `;
@@ -206,12 +207,10 @@ const CareerCard = (props) => {
               </a>
             </span>
             <span className="date">{date}</span>
+            <div className="summary">{summary}</div>
           </div>
         </SummarySection>
-        <ProjectSection>
-          <div className="summary">{summary}</div>
-          {getProjectBox(projects)}
-        </ProjectSection>
+        <ProjectSection>{getProjectBox(projects)}</ProjectSection>
       </ContentWrapper>
     </CustomCard>
   );
