@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/yj-worklog/static/css/main.481e397a.chunk.css",
-    "main.js": "/yj-worklog/static/js/main.ddced9ed.chunk.js",
-    "main.js.map": "/yj-worklog/static/js/main.ddced9ed.chunk.js.map",
+    "main.js": "/yj-worklog/static/js/main.65a9b512.chunk.js",
+    "main.js.map": "/yj-worklog/static/js/main.65a9b512.chunk.js.map",
     "runtime-main.js": "/yj-worklog/static/js/runtime-main.612b9f91.js",
     "runtime-main.js.map": "/yj-worklog/static/js/runtime-main.612b9f91.js.map",
     "static/js/2.0a14f4e8.chunk.js": "/yj-worklog/static/js/2.0a14f4e8.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/2.0a14f4e8.chunk.js.LICENSE.txt": "/yj-worklog/static/js/2.0a14f4e8.chunk.js.LICENSE.txt",
     "static/media/dev_yj.89e5d389.png": "/yj-worklog/static/media/dev_yj.89e5d389.png",
     "static/media/hj_logo.224f035c.png": "/yj-worklog/static/media/hj_logo.224f035c.png",
-    "static/media/pre_blog_1.7c2e1830.png": "/yj-worklog/static/media/pre_blog_1.7c2e1830.png",
+    "static/media/pre_blog_1.12f0dd6b.png": "/yj-worklog/static/media/pre_blog_1.12f0dd6b.png",
     "static/media/pre_blog_2.e433a567.png": "/yj-worklog/static/media/pre_blog_2.e433a567.png",
     "static/media/pre_career_1.e95de9e5.png": "/yj-worklog/static/media/pre_career_1.e95de9e5.png",
     "static/media/pre_career_2.fc032c6d.png": "/yj-worklog/static/media/pre_career_2.fc032c6d.png",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.612b9f91.js",
     "static/js/2.0a14f4e8.chunk.js",
     "static/css/main.481e397a.chunk.css",
-    "static/js/main.ddced9ed.chunk.js"
+    "static/js/main.65a9b512.chunk.js"
   ]
 }
