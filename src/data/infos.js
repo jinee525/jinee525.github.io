@@ -72,7 +72,7 @@ const jobs = [
         content:
           '서비스하는 모든 콘텐츠에대한 통합 검색 기능 MVP를 AWS-Elasticsearch를 이용하여 구현했습니다.\n1. 다양한 타입의 콘텐츠를 추가할 수 있게 union type을 이용하여 확장성 있는 GraphQL schema를 정의함\n2. 30분마다 update된 postgreSQL의 data를 AWS-EventBridge로 구독하여 AWS-Elasticsearch에 싱크함\n3. GraphQL로 search 스키마를 정의하고 resolver에 ES 쿼리를 작성하여 검색 시스템을 구현함',
         boundary: ['BE'],
-        tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'AWS-Lambda', 'AWS-EventBridge'],
+        tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'AWS-Lambda', 'AWS-EventBridge', 'JavaScript'],
         url: 'https://heyjoyce.com',
       },
       {
@@ -80,7 +80,7 @@ const jobs = [
         content:
           'microservice 중 하나인 feed service를 확장 설계하여 여러 타입의 콘텐츠(ex. 블로그, 리뷰)를 제공할 수 있도록 설계했습니다.\n1. 모든 타입에서 사용하는 공통 필드와 개별 필들를 정의하고 CRUD를 재 정의함\n2. 각 요청에 맞게 GraphQL input을 수정하고, resolver에 ES 쿼리를 작성하여 조건에 맞는 콘텐츠를 제공할 수 있도록 구현함',
         boundary: ['BE'],
-        tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL'],
+        tech: ['AWS-Elasticsearch', 'AWS-DynamoDB', 'GraphQL', 'JavaScript'],
         url: '',
       },
       {
@@ -91,6 +91,14 @@ const jobs = [
         tech: ['AWS-Elasticsearch', 'GraphQL', 'React', 'JavaScript', 'Node.js', 'CSS'],
         url: 'https://heyjoyce.com/blog/list',
         preview: [PreBlog1, PreBlog2],
+      },
+      {
+        title: '휴면계정 30일전 안내 및 당일 전환',
+        content:
+          '마지막 로그인 날짜로 부터 1년이 지난 유저를 대상으로 30일전 안내와 당일 휴면 계정 전환 프로세스를 구현했습니다.\n1. Sequelize(ORM for Postgres)를 이용하여 30일 전 안내 대상 유저와 당일 전환되는 유저 리스트를 생성함\n2. 리스트 별로 쿠폰 대량 자동 지급 또는 SaaS API를 이용하여 알림톡과 메일을 보내는 람다함수를 작성함\n3. AWS-EventBridge로 매일 자정에 휴면 계정 처리 람다함수를 호출함',
+        boundary: ['BE'],
+        tech: ['AWS-EventBridge', 'AWS-Lambda', 'JavaScript', 'SaaS'],
+        url: '',
       },
       {
         title: '아이디/비밀번호 찾기 개선 (VoC 이슈)',
