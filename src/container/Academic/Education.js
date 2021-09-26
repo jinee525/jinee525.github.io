@@ -5,7 +5,7 @@ import SchoolIcon from '@material-ui/icons/School';
 
 import ProjectCard from '../../component/ProjectCard';
 import SimpleCard from '../../component/SimpleCard';
-import { gameProjects, AIProjects, UXProjects, clubs } from '../../data/projects';
+import { gameProjects, UXAIProjects, clubs } from '../../data/projects';
 import { colorDict } from '../../helpers/colors';
 
 const Chip = styled.div`
@@ -112,18 +112,10 @@ const Education = () => {
         </div>
       </Section>
       <Section>
-        <span className="title">UX/UI Projects</span>
+        <span className="title">UX/UI Projects, AI PROJECTS</span>
         <div className="flexContainer">
           <Grid container justifyContent="space-around">
-            {getProjectCards(UXProjects)}
-          </Grid>
-        </div>
-      </Section>
-      <Section>
-        <span className="title">AI PROJECTS</span>
-        <div className="flexContainer">
-          <Grid container justifyContent="space-around">
-            {getProjectCards(AIProjects)}
+            {getProjectCards(UXAIProjects)}
           </Grid>
         </div>
       </Section>
