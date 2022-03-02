@@ -6,23 +6,27 @@ import PreCareer2 from './img/pre_career_2.png';
 import PrePackage1 from './img/pre_package_1.png';
 import PrePackage2 from './img/pre_package_2.png';
 
-const skills = [
-  'React',
-  'JavaScript ',
-  'Node.js',
-  'Django',
-  'Python',
-  'GraphQL',
-  'AWS',
-  'SaaS',
-  'PostgreSQL',
-  'Responsive Web',
-  'CSS3',
-  'HTML5',
-  'HTTP',
-  'ReactAdmin',
-];
+const skills = {
+  main: ['React',
+    'JavaScript ',
+    'CSS',
+    'Responsive Web',
+    'GraphQL',
+    'PostgreSQL',
+    'AWS',
+    'ReactAdmin',
+  ],
+  sub: [
+    'Django',
+    'Python',
+    'React-Native',
+    'next.js',
+    'TypeScript'
+  ]
 
+};
+const introduce = `사람을 위한 프로덕트를 만드는 개발자가 되고자 컴퓨터공학을 주 전공으로하며 디지털 인문학을 복수로 전공했습니다. 디자인 수업에서 유저 분석과 UX/UI에 대해 배우고 프로젝트를 진행하며 유저 중심으로 사고하는 법을 배웠습니다.\n실제 비즈니스 성장에 기여하며 개발 실력을 쌓고자 스타트업의 풀 스택 개발자로 커리어를 시작했습니다. CTO와 개발자 2인으로 구성된 작은 개발팀으로 시작하여 pm과 디자이너가 포함된 7인의 프로덕트 팀으로 성장하는 과정에서 개발 능력뿐만 아니라 프로덕트에 대해 항상 고민하는 개발자가 되었습니다. 크고 작은 프로젝트에서 기획/FE/BE 다양한 포지션으로 업무를 진행하며, 애자일하게 일을 진행하는 능력과 커뮤니케이션 능력을 키우고 있습니다.
+`
 const jobs = [
   {
     id: 1,
@@ -31,7 +35,7 @@ const jobs = [
     url: 'https://heyjoyce.com',
     date: '2020.07.07 ~ 2021.01.07 (인턴) / 2021.01.08 ~ 현재 (정규)',
     summary:
-      '스타트업의 5인으로 이루어진 개발팀에서 풀스택 웹개발자로 근무하고 있습니다. 적은 인원으로 이루어진 개발팀이기에 크고 작은 프로젝트들을 주도적으로 진행하고있습니다. AWS를 이용하여 효율적으로 BE개발을 하고 React로 FE를 구현하며 빠른 delivery를 하고있습니다.',
+      '6인으로 이루어진 프로덕트팀에서 풀스택 웹개발자로 근무하고 있습니다. 유저와 만나는 웹/앱 프런트부터 서비스를 지탱하는 백엔드까지, 크고 작은 프로젝트들을 주도적으로 진행하고있습니다.\nAWS를 이용하여 BE 개발을 하고 React로 FE를 구현하며 빠른 delivery를 하고있습니다.',
     projects: [
       {
         title: '배너 자동화',
@@ -112,4 +116,4 @@ const jobs = [
   },
 ];
 
-export { skills, jobs };
+export { skills, introduce, jobs };

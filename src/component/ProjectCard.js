@@ -5,73 +5,36 @@ import PageviewIcon from '@material-ui/icons/Pageview';
 
 import { colorDict } from '../helpers/colors';
 
-const FlickerItem = styled.div`
-  width: 270px;
-  border: 0px;
-  box-shadow: none;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  padding-bottom: 17px;
-`;
-
 const CustomCard = styled.div`
-  width: 230px;
+  width: 100%;
+  height: 250px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  justify-content: space-between;
-  padding: 40px 20px 20px;
-
-  box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 30%);
+  flex-direction: row;
   border-radius: 4px;
-
-  .gitBox {
-    display: flex;
-    flex-direction: row;
-    .git {
-      width: 186px;
-      padding-right: 4px;
-      word-break: break-all;
-      font-size: smaller;
-      color: ${colorDict.lightText};
-      margin: 6px 0px;
-    }
+  background-color: #7f9eb21a;
+  &:not(:first-child){
+    margin-top:20px;
   }
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 1px 2px 4px -1px rgb(0 0 0 / 60%);
-  }
-`;
-
-const IconWrapper = styled.div`
-  display: flex;
-  border-radius: 8px;
-  padding: 10px;
-  align-self: center;
-
   &:hover {
     cursor: pointer;
     background-color: ${colorDict.lightBackground};
   }
 `;
-
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  align-self: center;
   .title {
-    margin-top: 10px;
+    margin-top: 10px 0 0 0;
     font-size: larger;
     font-weight: bold;
   }
   .desc {
-    margin: 6px 0px;
+    margin: 10px 0 0 0;
+    width: 580px;
+  }
+  .link{
+    text-align: end;
   }
 `;
 
@@ -80,16 +43,19 @@ const ImgWrapper = styled.div`
   overflow: hidden;
   width: 200px;
   height: 200px;
+  align-self: center;
+  width: 250px;
 `;
 
 const Img = styled.img`
-  max-width: 100%;
+  width: 200px;
+  margin: 0px 25px;
 `;
 
 const ProjectCard = (props) => {
   const { item: projects } = props;
   const { id, data } = projects;
-  const { thumbnail, title, desc, techInfo, role, link } = data;
+  const { thumbnail, title, desc, techInfo, role, link, type } = data;
 
   // move to each blog
   const handleClick = (link) => {
@@ -97,23 +63,18 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <FlickerItem key={id}>
-      <CustomCard onClick={() => handleClick(link)}>
-        <ContentWrapper>
-          <ImgWrapper>
-            <Img src={thumbnail} alt="profile-image" />
-          </ImgWrapper>
-          <span className="title">{title}</span>
-          <span className="desc">{desc}</span>
-          <span className="desc">{techInfo}</span>
-          <span className="desc">{role}</span>
-        </ContentWrapper>
-        <div className="gitBox">
-          <span className="git">{link}</span>
-          <IconWrapper onClick={() => handleClick(link)}>{techInfo === 'AdobeXD' ? <PageviewIcon /> : <GitHubIcon />}</IconWrapper>
-        </div>
-      </CustomCard>
-    </FlickerItem>
+    <CustomCard key={id} onClick={() => handleClick(link)}>
+      <ImgWrapper>
+        <Img src={thumbnail} alt="profile-image" />
+      </ImgWrapper>
+      <ContentWrapper>
+        <span className="title">{title}</span>
+        <span className="desc">{desc}</span>
+        <span className="desc">사용 기술: {techInfo}</span>
+        <span className="desc">{role ? `맡은 역할: ${role}` : `프로젝트 유형: ${type}`}</span>
+        <span className="link">{techInfo === 'AdobeXD' ? <PageviewIcon /> : <GitHubIcon />}</span>
+      </ContentWrapper>
+    </CustomCard >
   );
 };
 

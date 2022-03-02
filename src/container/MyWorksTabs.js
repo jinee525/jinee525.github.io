@@ -58,17 +58,17 @@ function tabProps(index) {
   };
 }
 
-const MyWorksTabs = ({ currentTabValue, handleTabValue }) => {
-  const onChangeTabValue = (newValue) => {
-    handleTabValue(newValue);
+const MyWorksTabs = ({ currentTabIndex, handleTabIndex }) => {
+  const onChangeTabIndex = (newIndex) => {
+    handleTabIndex(newIndex);
   };
 
   return (
     <TabWrapper>
-      <Tab isSelected={currentTabValue === 0} onClick={() => onChangeTabValue(0)} {...tabProps(0)}>
+      <Tab isSelected={currentTabIndex === 0} onClick={() => onChangeTabIndex(0)} {...tabProps(0)}>
         Education
       </Tab>
-      <Tab isSelected={currentTabValue === 1} onClick={() => onChangeTabValue(1)} {...tabProps(1)}>
+      <Tab isSelected={currentTabIndex === 1} onClick={() => onChangeTabIndex(1)} {...tabProps(1)}>
         Work Experience
       </Tab>
     </TabWrapper>

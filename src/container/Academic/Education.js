@@ -12,7 +12,7 @@ const Chip = styled.div`
   width: auto;
   height: auto;
   padding: 6px 12px;
-  margin: 4px 8px;
+  margin: 0px 8px 8px;
   border-radius: 8px;
   background-color: ${colorDict.lightBackground};
 `;
@@ -25,14 +25,13 @@ const Section = styled.div`
   margin: 20px 0px;
   flex-direction: column;
   display: flex;
-
   .title {
     font-size: larger;
     font-weight: bold;
   }
 
-  .desc {
-    margin: 20px 0px 20px 8px;
+  .univ {
+    margin: 20px 0px 0px 8px;
 
     li {
       display: flex;
@@ -42,7 +41,7 @@ const Section = styled.div`
 
   .flexContainer {
     width: 100%;
-    margin: 20px 0px;
+    margin: 20px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,9 +56,7 @@ const IconWrapper = styled.div`
 const getProjectCards = (projects) => {
   return projects.map((item) => {
     return (
-      <Grid item key={item.id}>
-        <ProjectCard item={item} />
-      </Grid>
+      <ProjectCard item={item} />
     );
   });
 };
@@ -85,7 +82,7 @@ const Education = () => {
     <Wrapper>
       <Section>
         <span className="title">Education</span>
-        <span className="desc">
+        <span className="univ">
           <li>
             <IconWrapper>
               <SchoolIcon />
@@ -98,25 +95,21 @@ const Education = () => {
         </span>
       </Section>
       <Section>
-        <span className="title">Activities</span>
-        <div className="flexContainer">
-          <Grid container>{getClubCards(clubs)}</Grid>
-        </div>
-      </Section>
-      <Section>
         <span className="title">Game Projects</span>
         <div className="flexContainer">
-          <Grid container justifyContent="space-around">
-            {getProjectCards(gameProjects)}
-          </Grid>
+          {getProjectCards(gameProjects)}
         </div>
       </Section>
       <Section>
         <span className="title">UX/UI Projects, AI PROJECTS</span>
         <div className="flexContainer">
-          <Grid container justifyContent="space-around">
-            {getProjectCards(UXAIProjects)}
-          </Grid>
+          {getProjectCards(UXAIProjects)}
+        </div>
+      </Section>
+      <Section>
+        <span className="title">Activities</span>
+        <div className="flexContainer">
+          <Grid container>{getClubCards(clubs)}</Grid>
         </div>
       </Section>
     </Wrapper>

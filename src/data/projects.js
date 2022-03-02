@@ -46,7 +46,8 @@ const UXAIProjects = [
     data: {
       thumbnail: ProjectPoint,
       title: '카카오톡 포인트 적립',
-      desc: '카페/식당 포인트 적립 서비스를 기획하고 프로토타입을 제작 (개인 프로젝트)',
+      desc: '카페/식당 포인트 적립 서비스를 기획하고 프로토타입을 제작',
+      type: '개인 프로젝트',
       techInfo: 'AdobeXD',
       link: 'https://xd.adobe.com/view/00425b86-7f18-4449-6762-14129515057c-7673/',
     },
@@ -56,7 +57,8 @@ const UXAIProjects = [
     data: {
       thumbnail: ProjectTransport,
       title: 'T-Bus',
-      desc: '타임매니저 시스템을 중심으로 대중교통 앱을 기획하고 프로토타입을 제작 (팀 프로젝트)',
+      desc: '타임매니저 시스템을 중심으로 대중교통 앱을 기획하고 프로토타입을 제작',
+      type: '팀 프로젝트',
       techInfo: 'AdobeXD',
       link: 'https://xd.adobe.com/view/031c64a2-38d5-4cca-577c-cc82ca783f00-752d/',
     },
@@ -67,7 +69,7 @@ const UXAIProjects = [
       thumbnail: ProjectTagDocs,
       title: '태그독스',
       desc: '인공지능을 활용하여 추출한 문서의 형식, 내용 태그를 활용하여 편리한 검색 & 분류 를 제공하는 프로그램',
-      role: '',
+      type: '팀 프로젝트',
       techInfo: 'C#, Python, Anaconda',
       link: 'https://github.com/sojung127/TagDocx',
     },

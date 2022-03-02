@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MyWorksContainer from './container/MyWorksContainer';
 import Profile from './component/Profile';
 
-const MainWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,29 +11,25 @@ const MainWrapper = styled.div`
   margin: 30px auto;
   width: 920px;
   height: 100%;
+  letter-spacing: 0.02em;
 `;
-const ProfileSection = styled.div`
+const Section = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
-  margin: 20px auto;
-`;
-const WorkSection = styled(ProfileSection)`
-  margin: 20px auto;
   height: auto;
 `;
 
 function App() {
   return (
-    <MainWrapper>
-      <ProfileSection>
+    <Wrapper>
+      <Section>
         <Profile />
-      </ProfileSection>
-      <WorkSection>
-        <MyWorksContainer></MyWorksContainer>
-      </WorkSection>
-    </MainWrapper>
+      </Section>
+      <Section>
+        <MyWorksContainer />
+      </Section>
+    </Wrapper>
   );
 }
 

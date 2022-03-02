@@ -6,18 +6,18 @@ import Education from './Academic/Education';
 import CareersContainer from './Career/CareersContainer';
 
 const MyWorksContainer = () => {
-  const TabEl = useRef();
-  const [currentTabValue, setCurrentTabValue] = useState(0);
+  const Tab = useRef();
+  const [currentTabIndex, setCurrentTabIndex] = useState(0);
 
   return (
     <div>
-      <div ref={TabEl} style={{ width: '100%', position: 'sticky', top: 0, zIndex: 999 }}>
-        <MyWorksTabs currentTabValue={currentTabValue} handleTabValue={setCurrentTabValue} />
+      <div ref={Tab} style={{ width: '100%', position: 'sticky', top: 0, zIndex: 999 }}>
+        <MyWorksTabs currentTabIndex={currentTabIndex} handleTabIndex={setCurrentTabIndex} />
       </div>
-      <MyWorksTabContents value={currentTabValue} index={0}>
+      <MyWorksTabContents value={currentTabIndex} index={0}>
         <Education></Education>
       </MyWorksTabContents>
-      <MyWorksTabContents value={currentTabValue} index={1}>
+      <MyWorksTabContents value={currentTabIndex} index={1}>
         <CareersContainer></CareersContainer>
       </MyWorksTabContents>
     </div>

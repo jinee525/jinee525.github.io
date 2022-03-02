@@ -75,6 +75,7 @@ const SummarySection = styled.div`
     }
     .summary {
       margin-top: 10px;
+      white-space: break-spaces;
     }
   }
 `;

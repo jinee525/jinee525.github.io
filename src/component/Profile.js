@@ -2,17 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Grid } from '@material-ui/core';
 
 import { colorDict } from '../helpers/colors';
-import ProfileImg from '../data/img/dev_yj.png';
-import { skills } from '../data/infos';
+import ProfileImg from '../data/img/개발자프로필.JPEG';
+import { skills, introduce } from '../data/infos';
 
 const Chip = styled.div`
   width: auto;
   height: auto;
   padding: 6px 12px;
-  margin: 4px 8px;
+  margin: 0px 8px;
   border-radius: 8px;
   border: solid 1px ${colorDict.darkText};
 `;
@@ -20,18 +21,25 @@ const Chip = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 
-const Section = styled.div`
+const ProfileSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const DescSection = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ImgWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin: 20px;
 `;
 
@@ -40,11 +48,11 @@ const Img = styled.img`
 `;
 
 const InfoWrapper = styled.div`
-  margin: 20px;
-
+  margin: 20px auto 50px;
   .name {
     font-size: larger;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
 
     span:first-child {
       margin-right: 10px;
@@ -56,23 +64,32 @@ const InfoWrapper = styled.div`
   .info {
     display: flex;
     padding: 4px 6px;
+
     &:hover {
       cursor: pointer;
       border-radius: 8px;
       background-color: ${colorDict.lightBackground};
     }
   }
+`;
+
+const SkillWrapper = styled.div`
   .title {
     font-size: larger;
     font-weight: bold;
   }
   .flexContainer {
     width: 100%;
-    margin: 20px 0px;
+    margin: 5px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .text{
+    margin: 5px 0px 0px 8px;
+    white-space: pre-wrap;
+  }
+  margin-bottom: 20px;
 `;
 
 const IconWrapper = styled.div`
@@ -80,13 +97,6 @@ const IconWrapper = styled.div`
   margin-right: 5px;
 `;
 
-const handleClickContactButton = (type) => {
-  if (type === 'email') {
-    window.location.href = 'mailto:mobiyujin@gmail.com';
-  } else if (type === 'github') {
-    window.open('https://github.com/jinee525');
-  }
-};
 const getSkills = (skills) => {
   return skills.map((item, index) => {
     return <Chip key={index}>{item}</Chip>;
@@ -96,7 +106,7 @@ const getSkills = (skills) => {
 const Profile = () => {
   return (
     <Wrapper>
-      <Section>
+      <ProfileSection>
         <ImgWrapper>
           <Img src={ProfileImg} alt="profile-image" />
         </ImgWrapper>
@@ -105,29 +115,45 @@ const Profile = () => {
             <span>박유진</span>
             <span>Yujin Park</span>
           </div>
-          <div className="info" onClick={() => handleClickContactButton('email')}>
+          <div className="info" onClick={() => window.location.href = 'mailto:mobiyujin@gmail.com'}>
             <IconWrapper>
               <EmailIcon />
             </IconWrapper>
             <span>mobiyujin@gmail.com</span>
           </div>
-          <div className="info" onClick={() => handleClickContactButton('github')}>
+          <div className="info" onClick={() => window.open('https://www.linkedin.com/in/dev-yujin/')}>
+            <IconWrapper>
+              <LinkedInIcon />
+            </IconWrapper>
+            <span>https://www.linkedin.com/in/dev-yujin/</span>
+          </div>
+          <div className="info" onClick={() => window.open('https://github.com/jinee525')}>
             <IconWrapper>
               <GitHubIcon />
             </IconWrapper>
             <span>https://github.com/jinee525</span>
           </div>
         </InfoWrapper>
-      </Section>
-      <Section>
-        <InfoWrapper>
-          <span className="title">Skills</span>
+      </ProfileSection>
+      <DescSection>
+        <SkillWrapper>
+          <span className="title">main-skills</span>
           <div className="flexContainer">
-            <Grid container>{getSkills(skills)}</Grid>
+            <Grid container>{getSkills(skills.main)}</Grid>
           </div>
-        </InfoWrapper>
-      </Section>
-    </Wrapper>
+        </SkillWrapper>
+        <SkillWrapper>
+          <span className="title">sub-skills</span>
+          <div className="flexContainer">
+            <Grid container>{getSkills(skills.sub)}</Grid>
+          </div>
+        </SkillWrapper>
+        <SkillWrapper>
+          <span className="title">introduce</span>
+          <p className="text">{introduce}</p>
+        </SkillWrapper>
+      </DescSection>
+    </Wrapper >
   );
 };
 
