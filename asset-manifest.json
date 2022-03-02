@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/yj-worklog/static/css/main.481e397a.chunk.css",
-    "main.js": "/yj-worklog/static/js/main.b968c877.chunk.js",
-    "main.js.map": "/yj-worklog/static/js/main.b968c877.chunk.js.map",
-    "runtime-main.js": "/yj-worklog/static/js/runtime-main.612b9f91.js",
-    "runtime-main.js.map": "/yj-worklog/static/js/runtime-main.612b9f91.js.map",
-    "static/js/2.0a14f4e8.chunk.js": "/yj-worklog/static/js/2.0a14f4e8.chunk.js",
-    "static/js/2.0a14f4e8.chunk.js.map": "/yj-worklog/static/js/2.0a14f4e8.chunk.js.map",
+    "main.js": "/yj-worklog/static/js/main.e3690d72.chunk.js",
+    "main.js.map": "/yj-worklog/static/js/main.e3690d72.chunk.js.map",
+    "runtime-main.js": "/yj-worklog/static/js/runtime-main.7ef4463e.js",
+    "runtime-main.js.map": "/yj-worklog/static/js/runtime-main.7ef4463e.js.map",
+    "static/js/2.07291c5f.chunk.js": "/yj-worklog/static/js/2.07291c5f.chunk.js",
+    "static/js/2.07291c5f.chunk.js.map": "/yj-worklog/static/js/2.07291c5f.chunk.js.map",
     "index.html": "/yj-worklog/index.html",
     "static/css/main.481e397a.chunk.css.map": "/yj-worklog/static/css/main.481e397a.chunk.css.map",
-    "static/js/2.0a14f4e8.chunk.js.LICENSE.txt": "/yj-worklog/static/js/2.0a14f4e8.chunk.js.LICENSE.txt",
-    "static/media/dev_yj.89e5d389.png": "/yj-worklog/static/media/dev_yj.89e5d389.png",
+    "static/js/2.07291c5f.chunk.js.LICENSE.txt": "/yj-worklog/static/js/2.07291c5f.chunk.js.LICENSE.txt",
     "static/media/hj_logo.224f035c.png": "/yj-worklog/static/media/hj_logo.224f035c.png",
     "static/media/pre_blog_1.12f0dd6b.png": "/yj-worklog/static/media/pre_blog_1.12f0dd6b.png",
     "static/media/pre_blog_2.e433a567.png": "/yj-worklog/static/media/pre_blog_2.e433a567.png",
@@ -18,6 +17,7 @@
     "static/media/pre_career_2.fc032c6d.png": "/yj-worklog/static/media/pre_career_2.fc032c6d.png",
     "static/media/pre_package_1.7edaf80c.png": "/yj-worklog/static/media/pre_package_1.7edaf80c.png",
     "static/media/pre_package_2.b35a1cfa.png": "/yj-worklog/static/media/pre_package_2.b35a1cfa.png",
+    "static/media/개발자프로필.4bbce488.JPEG": "/yj-worklog/static/media/개발자프로필.4bbce488.JPEG",
     "static/media/대중교통.45f9a3d7.png": "/yj-worklog/static/media/대중교통.45f9a3d7.png",
     "static/media/스시스택.9fe2ee4d.png": "/yj-worklog/static/media/스시스택.9fe2ee4d.png",
     "static/media/욜로.4b6fa9f9.png": "/yj-worklog/static/media/욜로.4b6fa9f9.png",
@@ -26,9 +26,9 @@
     "static/media/포인트.06c384be.png": "/yj-worklog/static/media/포인트.06c384be.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.612b9f91.js",
-    "static/js/2.0a14f4e8.chunk.js",
+    "static/js/runtime-main.7ef4463e.js",
+    "static/js/2.07291c5f.chunk.js",
     "static/css/main.481e397a.chunk.css",
-    "static/js/main.b968c877.chunk.js"
+    "static/js/main.e3690d72.chunk.js"
   ]
 }
