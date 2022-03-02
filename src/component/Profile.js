@@ -14,14 +14,14 @@ const Chip = styled.div`
   height: auto;
   padding: 6px 12px;
   margin: 0px 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: solid 1px ${colorDict.darkText};
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 const ProfileSection = styled.div`
@@ -41,6 +41,8 @@ const ImgWrapper = styled.div`
   width: 200px;
   height: 200px;
   margin: 20px;
+  border-radius: 4px;
+
 `;
 
 const Img = styled.img`
@@ -48,7 +50,7 @@ const Img = styled.img`
 `;
 
 const InfoWrapper = styled.div`
-  margin: 20px auto 50px;
+  margin: 20px auto 40px;
   .name {
     font-size: larger;
     margin-bottom: 30px;
@@ -67,7 +69,7 @@ const InfoWrapper = styled.div`
 
     &:hover {
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 4px;
       background-color: ${colorDict.lightBackground};
     }
   }
@@ -88,6 +90,7 @@ const SkillWrapper = styled.div`
   .text{
     margin: 5px 0px 0px 8px;
     white-space: pre-wrap;
+    word-break: keep-all;
   }
   margin-bottom: 20px;
 `;

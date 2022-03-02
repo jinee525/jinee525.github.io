@@ -8,8 +8,10 @@ const Chip = styled.div`
   height: auto;
   padding: 6px 12px;
   margin: 4px 8px;
-  border-radius: 8px;
-  background-color: ${colorDict.lightBackground};
+  border-radius: 4px;
+  // background-color: ${colorDict.lightBackground};
+  background-color: #98b9ce1a;
+
 `;
 
 const CustomCard = styled.div`
@@ -19,18 +21,6 @@ const CustomCard = styled.div`
   flex-direction: column;
   height: auto;
   justify-content: space-between;
-`;
-
-const IconWrapper = styled.div`
-  display: flex;
-  align-self: flex-end;
-  border-radius: 8px;
-  padding: 10px;
-
-  &:hover {
-    cursor: pointer;
-    background-color: ${colorDict.lightBackground};
-  }
 `;
 
 const ContentWrapper = styled.div`
@@ -49,9 +39,9 @@ const ContentWrapper = styled.div`
 
 const SummarySection = styled.div`
   display: flex;
-  border: solid 1px #274c5e;
   padding: 20px;
   border-radius: 4px;
+  background-color: #98b9ce1a;
 
   .info {
     display: flex;
@@ -62,6 +52,7 @@ const SummarySection = styled.div`
       font-size: larger;
       font-weight: bold;
       .link {
+        margin-left: 6px;
         font-size: smaller;
         color: ${colorDict.lightText};
         &:hover {
@@ -76,6 +67,7 @@ const SummarySection = styled.div`
     .summary {
       margin-top: 10px;
       white-space: break-spaces;
+      word-break: keep-all;
     }
   }
 `;
@@ -94,6 +86,8 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
   max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
 `;
 
 const BoxWrapper = styled.div`
@@ -202,7 +196,7 @@ const CareerCard = (props) => {
           </ImgWrapper>
           <div className="info">
             <span className="company">
-              {company}{' '}
+              {company}
               <a className="link" href={url} target="_blank" rel="noreferrer">
                 {url}
               </a>

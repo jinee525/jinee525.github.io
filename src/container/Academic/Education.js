@@ -13,8 +13,8 @@ const Chip = styled.div`
   height: auto;
   padding: 6px 12px;
   margin: 0px 8px 8px;
-  border-radius: 8px;
-  background-color: ${colorDict.lightBackground};
+  border-radius: 4px;
+  border: solid 1px #274c5e;
 `;
 
 const Wrapper = styled.div`
@@ -95,6 +95,12 @@ const Education = () => {
         </span>
       </Section>
       <Section>
+        <span className="title">Activities</span>
+        <div className="flexContainer">
+          <Grid container>{getClubCards(clubs)}</Grid>
+        </div>
+      </Section>
+      <Section>
         <span className="title">Game Projects</span>
         <div className="flexContainer">
           {getProjectCards(gameProjects)}
@@ -104,12 +110,6 @@ const Education = () => {
         <span className="title">UX/UI Projects, AI PROJECTS</span>
         <div className="flexContainer">
           {getProjectCards(UXAIProjects)}
-        </div>
-      </Section>
-      <Section>
-        <span className="title">Activities</span>
-        <div className="flexContainer">
-          <Grid container>{getClubCards(clubs)}</Grid>
         </div>
       </Section>
     </Wrapper>

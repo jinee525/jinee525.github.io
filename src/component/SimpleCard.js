@@ -8,7 +8,7 @@ const Chip = styled.div`
   height: auto;
   padding: 6px 12px;
   margin: 4px 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: ${colorDict.lightBackground};
 `;
 

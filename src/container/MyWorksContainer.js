@@ -15,10 +15,10 @@ const MyWorksContainer = () => {
         <MyWorksTabs currentTabIndex={currentTabIndex} handleTabIndex={setCurrentTabIndex} />
       </div>
       <MyWorksTabContents value={currentTabIndex} index={0}>
-        <Education></Education>
+        <Education />
       </MyWorksTabContents>
       <MyWorksTabContents value={currentTabIndex} index={1}>
-        <CareersContainer></CareersContainer>
+        <CareersContainer />
       </MyWorksTabContents>
     </div>
   );

@@ -11,7 +11,7 @@ const CustomCard = styled.div`
   display: flex;
   flex-direction: row;
   border-radius: 4px;
-  background-color: #7f9eb21a;
+  background-color: #98b9ce1a;
   &:not(:first-child){
     margin-top:20px;
   }
@@ -44,12 +44,12 @@ const ImgWrapper = styled.div`
   width: 200px;
   height: 200px;
   align-self: center;
-  width: 250px;
+  border-radius: 4px;
+  margin: 0px 25px;
 `;
 
 const Img = styled.img`
-  width: 200px;
-  margin: 0px 25px;
+  width: 100%;
 `;
 
 const ProjectCard = (props) => {
