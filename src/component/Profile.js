@@ -13,7 +13,7 @@ const Chip = styled.div`
   width: auto;
   height: auto;
   padding: 6px 12px;
-  margin: 0px 8px;
+  margin: 0px 8px 8px;
   border-radius: 4px;
   border: solid 1px ${colorDict.darkText};
 `;

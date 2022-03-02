@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { colorDict } from '../helpers/colors';
@@ -75,7 +75,6 @@ const SummarySection = styled.div`
 const ProjectSection = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
 `;
 
 const ImgWrapper = styled.div`
@@ -95,7 +94,7 @@ const BoxWrapper = styled.div`
   flex-display: column;
   border-left: solid 2px ${colorDict.darkText};
   padding-left: 10px;
-  margin: 12px 0px;
+  margin: 0 0 20px 0;
 
   .title {
     display: flex;
@@ -142,6 +141,27 @@ const ImgContainer = styled.div`
     display: flex;
   }
 `;
+const Filter = styled.div`
+  display:flex;
+  margin: 16px 0px;
+
+  .chip-selected,.chip{
+    width: auto;
+    height: auto;
+    font-size: smaller;
+    padding: 2px 8px;
+    margin: 0 6px 0 0;
+    border-radius: 100px;
+    border: solid 1px #274c5e;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .chip-selected{
+    background-color: #274c5e;
+    color: #ffffff;
+  }
+`;
 
 const getChips = (items) => {
   return items.map((item, index) => {
@@ -182,10 +202,16 @@ const getProjectBox = (projects) => {
     );
   });
 };
+const filters = ['전체', '#FE', '#BE']
 
+const filterProject = (projects, selectedFilter) => {
+  if (selectedFilter === 0) return projects;
+  else return projects.filter((item) => item.boundary.includes(filters[selectedFilter].substring(1)))
+}
 const CareerCard = (props) => {
   const { item: careers } = props;
   const { logo, company, projects, date, url, summary } = careers;
+  const [selectedFilter, setSelectedFilter] = useState(0);
 
   return (
     <CustomCard key={careers.id}>
@@ -205,7 +231,10 @@ const CareerCard = (props) => {
             <div className="summary">{summary}</div>
           </div>
         </SummarySection>
-        <ProjectSection>{getProjectBox(projects)}</ProjectSection>
+        <Filter>
+          {filters.map((item, index) => { return <div key={index} className={index === selectedFilter ? 'chip-selected' : 'chip'} onClick={() => setSelectedFilter(index)}>{item}</div> })}
+        </Filter>
+        <ProjectSection>{getProjectBox(filterProject(projects, selectedFilter))}</ProjectSection>
       </ContentWrapper>
     </CustomCard>
   );
