@@ -11,13 +11,13 @@ const CustomCard = styled.div`
   display: flex;
   flex-direction: row;
   border-radius: 4px;
-  background-color: #98b9ce1a;
+  background-color: ${colorDict.lightGrayBackground};
   &:not(:first-child){
     margin-top:20px;
   }
   &:hover {
     cursor: pointer;
-    background-color: ${colorDict.lightBackground};
+    background-color: ${colorDict.lightYellowBackground};
   }
 `;
 const ContentWrapper = styled.div`

@@ -9,7 +9,7 @@ const Chip = styled.div`
   padding: 6px 12px;
   margin: 4px 8px;
   border-radius: 4px;
-  background-color: ${colorDict.lightBackground};
+  background-color: ${colorDict.lightYellowBackground};
 `;
 
 const SimpleCard = (props) => {

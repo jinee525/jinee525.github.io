@@ -70,7 +70,7 @@ const InfoWrapper = styled.div`
     &:hover {
       cursor: pointer;
       border-radius: 4px;
-      background-color: ${colorDict.lightBackground};
+      background-color: ${colorDict.lightYellowBackground};
     }
   }
 `;
