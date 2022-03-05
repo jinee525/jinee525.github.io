@@ -66,7 +66,7 @@ const jobs = [
         boundary: ['BE'],
         tech: ['AWS-Lambda', 'AWS-DynamoDB', 'AWS-EventBridge', 'JavaScript'],
         url: '',
-        solutions: [['내부 상품을 구매한 유저를 외부 서비스에 자동으로 연결하고 싶음', 'SaaS api를 호출하여 외부 서비스에 유저를 자동으로 등록하는 람다를 작성하고 AWS EVENT로 구매 이벤트와 연결하여 "구매-외부 연결" 과정을 자동화 함']],
+        solutions: [['내부 상품을 구매한 유저를 외부 서비스에 자동으로 연결하고 싶음', 'SaaS api를 호출하여 외부 서비스에 유저를 자동으로 등록하는 람다를 작성하고 AWS EventBridge로 구매 이벤트와 연결하여 "구매-외부 연결" 과정을 자동화 함']],
       },
       {
         title: '검색 기능',
