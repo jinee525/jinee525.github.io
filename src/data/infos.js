@@ -81,11 +81,11 @@ const jobs = [
       {
         title: 'dynamoDB와 graphQL',
         content:
-          '다양한 형식의 데이터를 저장할 수 있는 db를 설계하고, client의 요청(필요한 데이터만, 원하는 형식으로)에 따라 새로운 CRUD를 빠르고 쉽게 개발하기 위해 dynamoDB와 graphQL를 이용하여 서비스를 구축했습니다.',
+          '다양한 구조의 데이터를 저장할 수 있는 db를 설계하고, client의 요청(필요한 데이터만&원하는 구조로)에 따라 새로운 CRUD를 빠르고 쉽게 개발하기 위해 dynamoDB와 graphQL를 이용하여 서비스를 구축했습니다.',
         boundary: ['BE'],
         tech: ['AWS-DynamoDB', 'AWS-AppSync', 'GraphQL', 'AWS-Lambda', 'JavaScript'],
         url: '',
-        solutions: [['서비스에 필요한 다양한 구조의 데이터를 쉽게 추가할 수 있는 table(document)이 필요함', '공통 필드와 개별 필드를 정의하여 스키마를 설계하고, 클라이언트의 필요에 따라 다양한 형태의 데이터를 제공하도록 작은 단위로 쪼개어 resolver를 구현함']],
+        solutions: [['서비스에 필요한 다양한 구조의 데이터를 쉽게 추가할 수 있는 table(document)이 필요함', '공통 필드와 개별 필드를 정의하여 스키마를 설계하고, 클라이언트의 필요에 따라 다양한 구조의 데이터를 제공하도록 작은 단위로 쪼개어 resolver를 구현함']],
       },
       {
         title: '효율적인 협업을 위한 작업',
