@@ -66,7 +66,7 @@ const jobs = [
         boundary: ['BE'],
         tech: ['AWS-Lambda', 'AWS-DynamoDB', 'AWS-EventBridge', 'JavaScript'],
         url: '',
-        solutions: [['내부 상품을 구매한 유저를 외부 서비스에 자동으로 연결하고 싶음', 'SaaS api를 호출하여 외부 서비스에 유저를 자동으로 등록하는 람다를 작성하고 AWS EventBridge로 구매 이벤트와 연결하여 "구매-외부 연결" 과정을 자동화 함']],
+        solutions: [['내부 상품을 구매한 유저를 외부 서비스에 자동으로 연결하고 싶음', 'SaaS api를 호출하여 외부 서비스에 유저를 자동으로 등록하는 람다를 작성하고 AWS EventBridge로 구매 이벤트와 연결하여 "구매-외부 연결" 과정을 자동화 함, 시스템 자동화를 통해 유저 경험을 개선하고 서비스 운영자의 리소스를 줄임']],
       },
       {
         title: '검색 기능',
@@ -85,7 +85,7 @@ const jobs = [
         boundary: ['BE'],
         tech: ['AWS-DynamoDB', 'AWS-AppSync', 'GraphQL', 'AWS-Lambda', 'JavaScript'],
         url: '',
-        solutions: [['서비스에 필요한 다양한 구조의 데이터를 쉽게 추가할 수 있는 table(document)이 필요함', '공통 필드와 개별 필드를 정의하여 스키마를 설계하고, 클라이언트의 필요에 따라 다양한 구조의 데이터를 제공하도록 작은 단위로 쪼개어 resolver를 구현함']],
+        solutions: [['서비스에 필요한 다양한 구조의 데이터를 쉽게 추가할 수 있는 table(document)이 필요함', '공통 필드와 개별 필드를 정의하여 중복을 줄인 스키마를 설계하고, 클라이언트의 필요에 따라 다양한 구조의 데이터를 제공하도록 작은 단위로 쪼개어 resolver를 구현함']],
       },
       {
         title: '효율적인 협업을 위한 작업',
@@ -94,7 +94,7 @@ const jobs = [
         boundary: ['BE'],
         tech: ['Serverless Framework', 'Git-Flow', 'GitHub Actions', 'Jest', 'AWS'],
         url: '',
-        solutions: [['AWS 작업을 코드로 관리하고 싶음', '코드로 severless를 관리할 수 있도록 AWS 설정 스크립트를 작성함'], ['테스트 코드를 통한 품질 확보', 'jest 이용하여 단위 테스트 코드를 작성함']],
+        solutions: [['AWS 작업을 코드로 관리하고 싶음', '코드로 severless를 관리할 수 있도록 AWS 설정 스크립트를 작성함'], ['테스트 코드를 통한 품질 확보', 'jest 이용하여 단위 테스트 코드를 작성함, 테스트에 필요한 인증 정보를 유저 유형 별로 관리하고 응답 값 형태에 따른 적절한 expect를 사용하여 테스트 코드를 작성함']],
       },
       {
         title: '블로그',
@@ -104,7 +104,7 @@ const jobs = [
         tech: ['React', 'JavaScript', 'GraphQL'],
         url: 'https://heyjoyce.com/blog/list',
         preview: [PreBlog1, PreBlog2],
-        solutions: [['외부 사이트에서 제공되었던 컨텐츠를 서비스 내부에서 제공하여 유저의 이탈을 막고 싶음', '블로그 형식의 글을 제공하는 페이지를 구현했음, 외부 검색과 노출을 위해 sitemap에 추가하는 작업을 진행하여 SPA의 취약점인 SEO를 보완함']],
+        solutions: [['외부 사이트에서 제공되었던 컨텐츠를 서비스 내부에서 제공하여 유저의 이탈을 막고 싶음', '블로그 형식의 글을 제공하는 페이지를 구현함, 외부 검색과 노출을 위해 sitemap에 추가하는 작업을 진행하여 SPA의 취약점인 SEO를 보완함']],
       },
       {
         title: '아이디/비밀번호 찾기 개선',
