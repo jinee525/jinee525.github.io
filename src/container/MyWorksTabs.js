@@ -66,10 +66,10 @@ const MyWorksTabs = ({ currentTabIndex, handleTabIndex }) => {
   return (
     <TabWrapper>
       <Tab isSelected={currentTabIndex === 0} onClick={() => onChangeTabIndex(0)} {...tabProps(0)}>
-        Education
+        Work Experience
       </Tab>
       <Tab isSelected={currentTabIndex === 1} onClick={() => onChangeTabIndex(1)} {...tabProps(1)}>
-        Work Experience
+        Education
       </Tab>
     </TabWrapper>
   );
